@@ -1,0 +1,30 @@
+a="aqadeaeq"
+dictn={}
+Len=0
+count=0
+l=0 
+r=0
+str1=0
+str2=0
+
+while(l<len(a) and r<len(a)):
+    if a[l] in dictn:
+        if count>Len:
+            Len=count
+            str1=r
+            str2=l
+        dictn.pop(a[r])
+        count=count-1
+        r+=1    
+    else:
+        count+=1
+        dictn[a[l]]=1
+        l+=1
+
+if count>Len:
+    Len=count
+    str1=r
+    str2=l
+
+print( "Length : "+str(Len))
+print ("Str : " + a[str1:str2])
