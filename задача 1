@@ -1,0 +1,19 @@
+
+list1=[2,4,5,5];
+list2=[7,3,5,1];
+list3=list()
+q=0
+z=0
+for x in range(len(list1) - 1, -1, -1):
+  y=list1[x]+list2[x]
+  y=y+z
+  q=int(y%10)
+  list3.append(q)
+  if(y<=10):
+    z=y/10
+  else:
+    z=0
+
+if (list3[len(list3)-1]==0):
+  list3.append(1)
+print(list3)
